@@ -3,6 +3,9 @@ class MainController < ApplicationController
   end
 
   def buy
-
+   if params["confirm"]
+    
+   end
+   redirect_to root_path
   end
 end

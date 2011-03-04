@@ -1,1 +1,135 @@
+= form_for :purchase, :url => main_buy_path, :class=>"new_purchase", :id=>"new_purchase" do |f|
+ %table{:cellspacing=>0, :cellpadding=>0, :border=>0, :align=>"center", :width=>"1000px", :background=>"pic/fon-wall.jpg"}
+  %tr
+   %td{:width=>"100%", :colspan=>4}
+    <img src="0.gif" width=1000 height=1 border=0>
+    <a href="#" name="shop"></a>
+    %h2
+     %b ЧП - твой чайный дилер.
+     Реальные цены, конкретный стаф, никакого палева!
+  %tr
+   %td{:width=>"33%", :align=>"center"}
+    <img src="0.gif" width=330 height=1 border=0><br>
+    %table{:cellspacing=>0, :cellpadding=>5, :border=>0}
+     %tr
+      %td.to3a{:valign=>"top"}
+       %b Те Гуань Инь (Высшей категории)
+       %br
+       фасуем от 100 г., 450 р
+      %td &nbsp;
+      %td
+       =f.fields_for '248' do |ff|
+        %select{:id=>"purchase_16_ammount", :name=>"purchase[16][amount]"}
+         %option{:value=>''} 
+         -(1..9).each do |i|
+          %option{:value=>i.to_s} #{i.to_s}
+     %tr
+      %td.to3a{:valign=>"top"}
+       %b Те Гуань Инь (I кат.)
+       %br
+       от 100 г., 350 р
+      %td &nbsp;
+      %td
+       =f.fields_for '249' do |ff|
+        %select{:id=>"purchase_16_ammount", :name=>"purchase[16][amount]"}
+         %option{:value=>''} 
+         -(1..9).each do |i|
+          %option{:value=>i.to_s} #{i.to_s}
+     %tr
+      %td.to3a{:valign=>"top"}
+       %b Те Гуань Инь Ван
+       %br
+       от 100&nbsp;г., 820 р
+      %td &nbsp;
+      %td
+       =f.fields_for '250' do |ff|
+        %select#purchase_16_ammount{:name=>"purchase[16][amount]"}
+         %option{:value=>''} 
+         -(1..9).each do |i|
+          %option{:value=>i.to_s} #{i.to_s}
+   %td{:width=>"33%", :align=>"center"}
+    <img src="0.gif" width=330 height=1 border=0><br>
+
+    %table{:cellspacing=>0, :cellpadding=>5, :border=>0}
+     %tr
+      %td.to3a{:valign=>"top"}
+       %b Да Хун Пао
+       %br
+       фасуем от 100 г.,
+       %br
+       520 р
+      %td &nbsp;
+      %td
+       =f.fields_for '251' do |ff|
+        %select{:id=>"purchase_16_ammount", :name=>"purchase[16][amount]"}
+         %option{:value=>''} 
+         -(1..9).each do |i|
+          %option{:value=>i.to_s} #{i.to_s}
+   %td{:width=>"33%", :align=>"center"}
+    <img src="0.gif" width=330 height=1 border=0><br>
+    %table{:cellspacing=>0, :cellpadding=>5, :border=>0}
+     %tr
+      %td.to3a{:valign=>"top"}
+       %b Прессованный Пуэр Сяо То
+       %br
+       фасуем от 100&nbsp;г., 120 р
+      %td &nbsp;
+      %td
+       =f.fields_for '234' do |ff|
+        %select{:id=>"purchase_16_ammount", :name=>"purchase[16][amount]"}
+         %option{:value=>''} 
+         -(1..9).each do |i|
+          %option{:value=>i.to_s} #{i.to_s}
+     %tr
+      %td.to3a{:valign=>"top"}
+       %b>Белый Пуэр
+       %br
+       прессованный круг, 390&nbsp;г., 3700 р
+      %td &nbsp;
+      %td
+       =f.fields_for '238' do |ff|
+        %select{:id=>"purchase_16_ammount", :name=>"purchase[16][amount]"}
+         %option{:value=>''} 
+         -(1..9).each do |i|
+          %option{:value=>i.to_s} #{i.to_s}
+     %tr
+      %td.to3a{:valign=>"top"}
+       %b Прессованный Пуэр (кирпич)
+       %br
+       50 г., 200 р.
+      %td &nbsp;
+      %td
+       =f.fields_for '233' do |ff|
+        %select{:id=>"purchase_16_ammount", :name=>"purchase[16][amount]"}
+         %option{:value=>''} 
+         -(1..9).each do |i|
+          %option{:value=>i.to_s} #{i.to_s}
+     %tr
+      %td.to3a{:valign=>"top"}
+       %b Пуэр
+       %br
+       от 100 г., 150&nbsp;р.
+      %td &nbsp;
+      %td
+       =f.fields_for '236' do |ff|
+        %select{:id=>"purchase_16_ammount", :name=>"purchase[16][amount]"}
+         %option{:value=>''} 
+         -(1..9).each do |i|
+          %option{:value=>i.to_s} #{i.to_s}
+   %td
+    <img src="0.gif" width=9 height=1 border=0>
+  %tr
+   %td.to4{:width=>"100%", :colspan=>4}
+
+    %label{:for=>"purchase_u_name"}
+     %b Имя
+    =f.text_field :u_name, :size=>"30", :style=>"font:10px;  font-family: Arial, Helvetica, Sans-serif; color:#аааа00;background:#ffff99;"
+    %label{:for=>"purchase_u_mail"}
+     %b Мыло, телефон
+    =f.text_field :u_mail, :size=>"30", :style=>"font:10px;  font-family: Arial, Helvetica, Sans-serif; color:#аааа00;background:#ffff99;"
+    %br
+    %label{:for=>"purchase_address"}
+     %b Куда подогнать
+    =f.text_area :address, :cols=>"80", :rows=>"3", :style=>"font:10px;  font-family: Arial, Helvetica, Sans-serif; color:#аааа00;background:#ffff99;"
+    =f.submit "Намутить",:id=>"purchase_submit", :style=>"padding:3px;font:16px bold Arial; font-weight: bold; font-family: Arial, Helvetica, Sans-serif;color:#dddd00;background:#111111;"
 
