@@ -2,7 +2,19 @@
 
 %p Опустоши сознание и жди звонка от дилера. Свяжусь сегодня-завтра, на крайняк - мылом.
 
-%p В случае чего, можесь сам набрать +7 985 412 76 67
+%p В случае чего, можешь сам набрать +7 985 412 76 67
 
 %p Подогнать надо
-%p по адресу
+- unless @purchase.cart_items.empty?
+ %table
+  %tr
+   %th Сколько
+   %th Вещество
+  - @purchase.cart_items.each do |item|
+   %tr
+    %td #{item.amount}
+    %td #{item.product.andand.name}
+
+%p
+ по адресу
+ #{@purchase.address}

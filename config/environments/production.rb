@@ -12,6 +12,15 @@ ChePe::Application.configure do
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
 
+  config.action_mailer.delivery_method = :smtp
+#  config.action_mailer.smtp_settings = {
+#   :address => 'smtp.locum.ru',
+#   :port => 25,
+#   :domain => 'cup-of.ru'
+#  }
+  config.action_mailer.default_charset = 'utf-8'
+
+
   # For nginx:
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
