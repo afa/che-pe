@@ -14,6 +14,6 @@ class UserNotification < ActionMailer::Base
     @purchase = pchse
     puts "to: #{possible}"
     p @purchase
-    mail :to => possible, :bcc => ["dealer@che-pe.ru", "drvo@drvo.ru", "afa.alone@gmail.com"], :subject => "Есть товар"
+    mail :to => possible, :bcc => ["dealer@che-pe.ru", "afanas1984@mail.ru", "drvo@drvo.ru", "afa.alone@gmail.com"], :subject => "Есть товар"
   end
 end
