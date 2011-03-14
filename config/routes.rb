@@ -1,6 +1,7 @@
 ChePe::Application.routes.draw do
   root :to => "main#index"
   get "main/index"
+  get "main/order"
   post "main/buy"
 
   # The priority is based upon order of creation:
