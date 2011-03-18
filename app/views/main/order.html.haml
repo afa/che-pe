@@ -5,19 +5,19 @@
    %table{:border=>0, :align=>"center", :width=>1000}
     %tr
      %td
-      = image_tag "0.gif", :width=>5, :height=>1, :border=>0
+      = image_tag "/0.gif", :width=>5, :height=>1, :border=>0
       = image_tag "/pic/title.gif", :width=>586, :height=>244, :border=>0, :title=>"люблю чай как панда любит бамбук так же как любит Le Truk дуть траву в чайной кухни без обмана нет это не трюк эй поставь чайник на плиту при себе всегда имею десяток грамуль доверься стафу из моих рук и кипятку расфасованный вес или спрессованный круг это ЧАЙНЫЙ ПЬЯНЦА имей в виду"
      %td{:align=>"right"}
       %p.top3 Заказ чайному дилеру
-     %td= image_tag "0.gif", :width=>10, :height=>1, :border=>0
+     %td= image_tag "/0.gif", :width=>10, :height=>1, :border=>0
    - unless @purchase.andand.cart_items.andand.blank?
     %table{:border=>0, :align=>"center", :width=>1000}
      %tr
-      %th Сколько
-      %th Вещество
+      %th{:align => "center"} Сколько
+      %th{:align=>"center"} Вещество
      - @purchase.cart_items.each do |item|
       %tr
-       %td= item.amount
-       %td= item.product.name
+       %td{:align => "center"}= item.amount
+       %td{:align => "center"}= item.product.name
     
 
