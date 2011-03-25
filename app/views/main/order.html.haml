@@ -11,7 +11,7 @@
       %p.top3 Заказ чайному дилеру
      %td= image_tag "/0.gif", :width=>10, :height=>1, :border=>0
    - unless @purchase.andand.cart_items.andand.blank?
-    %table{:border=>0, :align=>"center", :width=>1000}
+    %table{:cellspacing=>0, :cellpadding=>0, :border=>0, :align=>"center", :width=>1000}
      %tr
       %th{:align => "center"} Сколько
       %th{:align=>"center"} Вещество
